@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdldv81ay64vj"]
+
+[ext_resource type="PackedScene" uid="uid://n8hf5mln02p2" path="res://Scenes/Player/player.tscn" id="1_ymvw1"]
+[ext_resource type="PackedScene" uid="uid://b27wbu1dqeai1" path="res://Scenes/Bullet/spawner.tscn" id="2_f2crh"]
+
+[node name="Gameplay" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_ymvw1")]
+
+[node name="Spawner" parent="." instance=ExtResource("2_f2crh")]
+
+[node name="Camera2D" type="Camera2D" parent="."]

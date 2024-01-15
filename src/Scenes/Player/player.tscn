@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://n8hf5mln02p2"]
+
+[ext_resource type="Script" path="res://Scenes/Player/player.gd" id="1_hg44d"]
+[ext_resource type="Texture2D" uid="uid://1yd2tc2y02fb" path="res://icon.svg" id="1_xx30e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cqinc"]
+radius = 32.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xqv16"]
+size = Vector2(19, 127)
+
+[node name="Player" type="Area2D"]
+script = ExtResource("1_hg44d")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_xx30e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_cqinc")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="Shield" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Shield"]
+modulate = Color(0.254902, 0.396078, 0.054902, 1)
+position = Vector2(74.5, 0)
+scale = Vector2(0.148438, 1)
+texture = ExtResource("1_xx30e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shield"]
+position = Vector2(74.5, 0)
+shape = SubResource("RectangleShape2D_xqv16")
